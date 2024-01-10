@@ -1,0 +1,1 @@
+cd C:\Users\Darwin-PC\Desktop\mywebapp && npm run dev
