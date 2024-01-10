@@ -25,20 +25,19 @@ export default function About() {
         textAlign: 'left',
       }}>
         <div style={{
-          width: '155px', // Ancho del contenedor con borde
-          height: '155px', // Altura del contenedor con borde
-          borderRadius: '30%', // Forma circular
-          border: '2px solid #32beb7', // Borde gris
-          marginRight: '20px', // Espacio entre la imagen y el texto
-          display: 'flex',
+          width: '155px', 
+          height: '155px', 
+          borderRadius: '30%', 
+          border: '2px solid #32beb7', 
+          marginRight: '20px', 
           justifyContent: 'center',
           alignItems: 'center',
         }}>
           <div style={{
-            width: '150px', // Ancho de la imagen
-            height: '150px', // Altura de la imagen
-            borderRadius: '30%', // Forma circular
-            overflow: 'hidden', // Oculta partes de la imagen que desbordan
+            width: '150px', 
+            height: '150px', 
+            borderRadius: '30%', 
+            overflow: 'hidden', 
           }}>
             <img
               src="/icons/foto.jpg" 
