@@ -12,7 +12,7 @@ const socialSection: React.FC = () => {
      <p style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#32beb7' }}>
        Social
      </p>
-     <TiSocialAtCircular style={{ marginLeft: '8px', marginTop: '-0px', fontSize: '1.5rem', color: '#32beb7' }} />
+     <TiSocialAtCircular style={{ marginLeft: '8px', marginTop: '-0px', fontSize: '1.9rem', color: '#32beb7' }} />
    </div>
    
    <p style={{ fontSize: '0.8rem', fontWeight: 'bold', color: '#000000', marginTop: "10px" }}>

@@ -15,7 +15,7 @@ export default function About() {
   return (
     //color de fondo blanco
     <div style={{ 
-      backgroundColor: "#000000"
+      backgroundColor: "#FFFFFF"
     }}>
    <CenterComponent >
     {/* Propiedades de las letras a la derecha de la imagen */}

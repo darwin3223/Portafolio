@@ -9,7 +9,7 @@ const AboutMeSection = () => {
           <p style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#32beb7' }}>
             About me and my skills
           </p>
-          <FaStarHalfAlt style={{ marginLeft: '8px', marginTop: '-5px', fontSize: '1.5rem', color: '#32beb7' }} />
+          <FaStarHalfAlt style={{ marginLeft: '8px', marginTop: '-5px', fontSize: '1.9rem', color: '#32beb7' }} />
         </div>
 
 
