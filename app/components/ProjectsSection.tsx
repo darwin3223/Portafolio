@@ -3,13 +3,6 @@ import React from 'react';
 import { PiSuitcaseSimpleFill } from "react-icons/pi";
 
 const projectsSection: React.FC = () => {
-    
-
-
-
-
-
-
 
   return (
    <div style={{

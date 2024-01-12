@@ -38,7 +38,7 @@ const MyProfileSection: React.FC = () => {
       <div style={{
         display: 'flex',
         flexDirection: 'column',
-        marginTop: "-4px",
+        marginTop: "-8px",
         justifyContent: "left",
         marginLeft: "1px"
       }}>
