@@ -11,12 +11,17 @@ import  HeaderTopSection from  './components/HeaderTopSection';
 
 export default function About() {
 
+
+  const theme = {
+    // Puedes definir colores u otras variables del tema aquí
+  };
   return (
     //Color Negro guia para saber donde estoy trabajando cambiar a blanco al finalizar el proyecto
     <div style={{ 
       backgroundColor: "#000000"
     }}>
   
+   
    <CenterComponent >
     <MyProfileSection /> 
 
@@ -33,6 +38,7 @@ export default function About() {
  
     <CopyrightsSection />
     </div>
+    
     
   );
 }

@@ -20,7 +20,7 @@ const CopyrightsSection: React.FC = () => {
       <footer style={footerStyle}>
         <p style={{ fontSize: '0.8rem', color: "#7ac7c1" }}>
           Copyright {new Date().getFullYear()} @ Almost all rights reserved{" "}
-          <Link href="https://www.linkedin.com/in/darwin-alves" passHref>
+          <Link href="https://www.linkedin.com/in/darwin-alves" target="_blank">
             <span style={grayClickableText}>Darwin Alves</span>
           </Link>
         </p>
