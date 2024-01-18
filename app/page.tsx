@@ -3,7 +3,9 @@ import { Metadata } from "next";
 import AboutMeSection from './components/AboutMeSection';
 import CopyrightsSection from './components/CopyrightsSection';
 import Separador from './components/Separador';
-import ProjectsSection from './components/ProjectsSection';
+import ProjectWeb from './components/ProjectsSection/Web-Aplication';
+import ProjectAndroid from './components/ProjectsSection/Android-Aplication';
+import ProjectPortafolio from './components/ProjectsSection/Portafolio';
 import SocialSection from './components/SocialSection';
 import CenterComponent from './components/CenterComponent';
 import MyProfileSection from  './components/MyProfileSection';
@@ -29,9 +31,10 @@ export default function About() {
 
       <AboutMeSection /> 
 
-    
-      <ProjectsSection />
+      <ProjectWeb />
 
+      <ProjectAndroid />
+      <ProjectPortafolio/>
       <SocialSection />  
 
       </CenterComponent>

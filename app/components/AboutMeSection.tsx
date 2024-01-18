@@ -13,8 +13,8 @@ const AboutMeSection = () => {
         </div>
         <header
       style={{
-        // ...otros estilos...
-        fontFamily: 'Poppins, sans-serif', // Agrega esta línea para usar la fuente Poppins
+       
+        fontFamily: 'Poppins, sans-serif', 
       }} >
     
         <div style={{ display: 'flex', alignItems: 'center' }}>
