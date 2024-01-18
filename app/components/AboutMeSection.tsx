@@ -7,7 +7,7 @@ const AboutMeSection = () => {
       <div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <p style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#32beb7' }}>
-            About me and my skills
+            Sobre mí y mis habilidades
           </p>
           <FaStarHalfAlt style={{ marginLeft: '8px', marginTop: '-5px', fontSize: '1.9rem', color: '#32beb7' }} />
         </div>

@@ -92,7 +92,7 @@ const MyProfileSection: React.FC = () => {
             color: '#7d7d7d',
           }}
         >
-          I am an IT technician, welcome to my portfolio web.
+         Soy un técnico IT, bienvenido a mi portafolio web.
         </p>
         <div
           style={{

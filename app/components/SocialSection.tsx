@@ -6,7 +6,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { TiSocialAtCircular } from "react-icons/ti";
 
 const SocialContainer = styled.div`
-  margin-top: 35px;
+  margin-top: 40px;
 `;
 const IconCenter = styled.div`
    display: 'flex';
