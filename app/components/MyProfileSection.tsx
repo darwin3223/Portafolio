@@ -49,14 +49,17 @@ const MyProfileSection: React.FC = () => {
           marginRight: '20px',
           justifyContent: 'center',
           alignItems: 'center',
+          backgroundColor: "#32beb7",
         }}
       >
         <div
           style={{
-            width: '150px',
-            height: '150px',
+            width: '151px',
+            height: '151px',
             borderRadius: '30%',
             overflow: 'hidden',
+            marginLeft: "0.2px",
+            marginTop: "0.2px"
           }}
         >
           <img
@@ -92,7 +95,7 @@ const MyProfileSection: React.FC = () => {
             color: '#7d7d7d',
           }}
         >
-         Soy un técnico IT, bienvenido a mi portafolio web.
+         Soy técnico IT, bienvenido a mi portafolio web.
         </p>
         <div
           style={{

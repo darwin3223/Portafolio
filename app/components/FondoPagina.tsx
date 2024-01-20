@@ -10,7 +10,7 @@ const CenterComponent: React.FC<CenterComponentProps> = ({ children }) => {
       backgroundColor: "#FFFFFF"
     }}>
       {children}
-    </div>
+    </div> 
   );
 };
 

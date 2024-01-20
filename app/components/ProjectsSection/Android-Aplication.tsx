@@ -9,7 +9,7 @@ const ProjectsSection: React.FC = () => {
 
   const containerStyle = {
     borderRadius: '10px',
-    overflow: 'hidden',
+    overflow: "hidden",
     marginTop: '20px',  
     position: 'relative',
     backgroundColor: '#effaf6',

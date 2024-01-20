@@ -55,7 +55,7 @@ const ProjectsSection: React.FC = () => {
         <a href="https://github.com/darwin3223/Portafolio" target="_blank" rel="noopener noreferrer">
           <div className="project-container" style={containerStyle}>
             <Image
-              src="/images/Portafolio.png"
+              src="/images/Portafolio.jpg"
               alt="Web App Project"
               width={400}
               height={400}

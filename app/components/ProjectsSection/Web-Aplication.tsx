@@ -3,6 +3,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { PiSuitcaseSimpleFill } from 'react-icons/pi';
+import { TbSql } from "react-icons/tb";
+import { FaJava } from "react-icons/fa6";
+import { FaCss3Alt } from "react-icons/fa";
+import { IoLogoHtml5 } from "react-icons/io5";
 
 const ProjectsSection: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -10,11 +14,11 @@ const ProjectsSection: React.FC = () => {
   const containerStyle = {
     borderRadius: '10px',
     overflow: 'hidden',
-    marginTop: '20px',  // Ajustado en comparación con el primer código
+    marginTop: '20px',  
     position: 'relative',
     backgroundColor: '#effaf6',
-    height: '200px',  // Ajustado en comparación con el primer código
-    width: '320px',   // Ajustado en comparación con el primer código
+    height: '200px',  
+    width: '320px',   
     display: 'flex',
     flexDirection: 'row',
   };
@@ -35,11 +39,11 @@ const ProjectsSection: React.FC = () => {
     color: '#000000',
     marginLeft: '20px',
     marginTop: "25px",
-    fontSize: '1.5rem',  // Ajustado en comparación con el primer código
+    fontSize: '1.5rem',  
     fontWeight: 'bold',
     fontFamily: 'Archivo, sans-serif',
-    display: 'flex',     // Ajustado en comparación con el primer código
-    alignItems: 'center',  // Ajustado en comparación con el primer código
+    display: 'flex',     
+    alignItems: 'center', 
   };
 
   const descriptionStyle = {

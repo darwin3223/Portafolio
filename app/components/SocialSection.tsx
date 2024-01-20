@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { TiSocialAtCircular } from "react-icons/ti";
+import { FaStarHalfAlt } from "react-icons/fa";
 
 const SocialContainer = styled.div`
   margin-top: 40px;
@@ -68,12 +69,14 @@ const SocialTextContent = styled.span`
 
 const SocialSection = () => {
   return (
+    
     <SocialContainer>
-      
-   <IconCenter>
-      <SocialText>Social</SocialText>
-      <AtIcon />
-    </IconCenter>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <p style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#32beb7' }}>
+            Social
+          </p>
+          <AtIcon style={{ marginLeft: '5px', marginTop: '-1px', fontSize: '1.9rem', color: '#32beb7' }} />
+        </div>
       <SocialButtonContainer>
         <SocialButton href="https://www.linkedin.com/in/darwin-alves" target="_blank">
           <SocialIcon iconColor="#0077b5">
