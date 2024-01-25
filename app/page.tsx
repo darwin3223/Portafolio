@@ -24,8 +24,9 @@ export default function About() {
       backgroundColor: "#000000"
     }}>
   
-  <HeaderTopSection />
+
    <CenterComponent >
+   <HeaderTopSection />
     <MyProfileSection /> 
       <Separador />
       <AboutMeSection /> 
@@ -36,7 +37,7 @@ export default function About() {
       <ContactSection />  
       <CopyrightsSection />
       </CenterComponent>
- 
+
     
     </div>
     

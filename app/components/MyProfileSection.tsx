@@ -40,13 +40,25 @@ const MyProfileSection: React.FC = () => {
         textAlign: 'left',
       }}
     >
+       <div
+        style={{
+          width: '168px',
+          height: '168px',
+          borderRadius: '30%',
+          border: '6px solid #FFFFFF',
+          marginRight: '20px',
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: "#FFFFFF",
+          boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.1)', // Agregado para aplicar un desenfoque al contorno
+        }}
+      >
       <div
         style={{
-          width: '155px',
-          height: '155px',
+          width: '157px',
+          height: '157px',
           borderRadius: '30%',
           border: '2px solid #32beb7',
-          marginRight: '20px',
           justifyContent: 'center',
           alignItems: 'center',
           backgroundColor: "#32beb7",
@@ -58,8 +70,8 @@ const MyProfileSection: React.FC = () => {
             height: '151px',
             borderRadius: '30%',
             overflow: 'hidden',
-            marginLeft: "0.2px",
-            marginTop: "0.2px"
+            marginLeft: "1.2px",
+            marginTop: "1.2px",
           }}
         >
           <img
@@ -69,7 +81,7 @@ const MyProfileSection: React.FC = () => {
           />
         </div>
       </div>
-
+      </div>
       <div
         style={{
           display: 'flex',
@@ -123,7 +135,7 @@ const MyProfileSection: React.FC = () => {
                 fontSize: '1.4rem',
               }}
             />
-            Resume
+            Currículum
           </a>
 
           <a
