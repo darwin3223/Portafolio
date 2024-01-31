@@ -1,3 +1,4 @@
+// components/CopyrightsSection.js
 "use client"
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -10,8 +11,13 @@ const footerStyle = {
   marginLeft: "71.5px",
   textAlign: 'center',
   borderRadius: "10px",
-  backgroundColor: '#FFFFFF',
-  transition: 'bottom 0.5s ease',
+  transition: 'bottom 0.4s ease',
+};
+
+const darkFooterStyle = {
+  ...footerStyle,
+  backgroundColor: '#1f2937', 
+  color: '#fff', 
 };
 
 const grayClickableText = {
@@ -21,13 +27,18 @@ const grayClickableText = {
   marginRight: '10px',
 };
 
+const darkGrayClickableText = {
+  ...grayClickableText,
+  color: '#a7f3d0', // Cambia al color de enlace en modo oscuro
+};
+
 const centerFooterStyle = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
 };
 
-const CopyrightsSection: React.FC = () => {
+const CopyrightsSection: React.FC = ({ isDarkMode }) => {
   const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
@@ -46,12 +57,12 @@ const CopyrightsSection: React.FC = () => {
   }, []);
 
   return (
-    <footer style={{ ...footerStyle, bottom: showFooter ? '0' : '-100px' }}>
+    <footer style={{ ...footerStyle, ...((isDarkMode && showFooter) ? darkFooterStyle : {}), bottom: showFooter ? '0' : '-100px' }}>
       <div style={centerFooterStyle}>
-        <p style={{ fontSize: '0.8rem', color: '#7ac7c1' }}>
+        <p style={{ fontSize: '0.8rem', color: isDarkMode ? '#7ac7c1' : '#7ac7c1' }}>
           Copyright {new Date().getFullYear()} @ Casi todos los derechos reservados{' '}
           <Link href="https://www.linkedin.com/in/darwin-alves" target="_blank">
-            <span style={grayClickableText}>Darwin Alves</span>
+            <span style={isDarkMode ? darkGrayClickableText : grayClickableText}>Darwin Alves</span>
           </Link>
         </p>
       </div>

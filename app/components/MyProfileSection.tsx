@@ -1,9 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
 import React, { useState } from 'react';
 import { FaRegFilePdf, FaLinkedin } from 'react-icons/fa';
 
-const MyProfileSection: React.FC = () => {
+interface MyProfileSectionProps {
+  isDarkMode: boolean;
+}
+
+const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode }) => {
   const [isResumeHovered, setResumeHovered] = useState(false);
   const [isLinkedInHovered, setLinkedInHovered] = useState(false);
 
@@ -12,8 +15,8 @@ const MyProfileSection: React.FC = () => {
     alignItems: 'center',
     padding: '10px',
     borderRadius: '10px',
-    backgroundColor: '#a7f3d0',
-    color: '#4f7463',
+    backgroundColor: isDarkMode ? '#333' : '#a7f3d0',
+    color: isDarkMode ? '#e3e4e6' : '#4f7463',
     border: 'none',
     cursor: 'pointer',
     fontWeight: 'bold',
@@ -40,47 +43,47 @@ const MyProfileSection: React.FC = () => {
         textAlign: 'left',
       }}
     >
-       <div
-        style={{
-          width: '168px',
-          height: '168px',
-          borderRadius: '30%',
-          border: '6px solid #FFFFFF',
-          marginRight: '20px',
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: "#FFFFFF",
-          boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.1)', // Agregado para aplicar un desenfoque al contorno
-        }}
-      >
-      <div
-        style={{
-          width: '157px',
-          height: '157px',
-          borderRadius: '30%',
-          border: '2px solid #32beb7',
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: "#32beb7",
-        }}
-      >
+    <div
+      style={{
+        width: '168px',
+        height: '168px',
+        borderRadius: '30%',
+        border: `6px solid ${isDarkMode ? '#171e2d' : '#FFFFFF'}`, 
+        marginRight: '20px',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: isDarkMode ? '#333' : '#FFFFFF', 
+        boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.1)',
+      }}
+    >
         <div
           style={{
-            width: '151px',
-            height: '151px',
+            width: '157px',
+            height: '157px',
             borderRadius: '30%',
-            overflow: 'hidden',
-            marginLeft: "1.2px",
-            marginTop: "1.2px",
+            border: `2px solid ${isDarkMode ? '#2b3444' : '#32beb7'}`, 
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: ` ${isDarkMode ? '#2b3444' : '#32beb7'}`, 
           }}
         >
-          <img
-            src="/icons/foto.jpg"
-            alt="foto"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
+          <div
+            style={{
+              width: '151px',
+              height: '151px',
+              borderRadius: '30%',
+              overflow: 'hidden',
+              marginLeft: "1.2px",
+              marginTop: "1.2px",
+            }}
+          >
+            <img
+              src="/icons/foto.jpg"
+              alt="foto"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          </div>
         </div>
-      </div>
       </div>
       <div
         style={{
@@ -95,7 +98,7 @@ const MyProfileSection: React.FC = () => {
           style={{
             fontSize: '2.5rem',
             fontWeight: 'bold',
-            color: '#5c5c5c',
+            color: isDarkMode ? '#f1f5f9' : '#5c5c5c',
           }}
         >
           Darwin Alves
@@ -104,10 +107,10 @@ const MyProfileSection: React.FC = () => {
           style={{
             fontSize: '1.0rem',
             fontWeight: 'normal',
-            color: '#7d7d7d',
+            color: isDarkMode ? '#f1f5f9' : '#7d7d7d',
           }}
         >
-         Soy técnico IT, bienvenido a mi portafolio web.
+          Soy técnico IT, bienvenido a mi portafolio web.
         </p>
         <div
           style={{
@@ -121,7 +124,7 @@ const MyProfileSection: React.FC = () => {
             target="_blank"
             style={{
               ...linkStyle,
-              backgroundColor: isResumeHovered ? '#74c4ba' : '#a7f3d0',
+              backgroundColor: isResumeHovered ? (isDarkMode ? '#74c4ba'  : '#a7f3d0') : (isDarkMode ? '#74c4ba' : '#a7f3d0'),
               transform: isResumeHovered ? 'scale(1.05)' : 'scale(1)',
             }}
             onMouseEnter={() => setResumeHovered(true)}
@@ -131,7 +134,7 @@ const MyProfileSection: React.FC = () => {
             <FaRegFilePdf
               style={{
                 marginRight: '5px',
-                color: '#5c5c5c',
+                color: isDarkMode ? '#e3e4e6' : '#5c5c5c',
                 fontSize: '1.4rem',
               }}
             />
@@ -143,7 +146,7 @@ const MyProfileSection: React.FC = () => {
             target="_blank"
             style={{
               ...linkStyle,
-              backgroundColor: isLinkedInHovered ? '#74c4ba' : '#a7f3d0',
+              backgroundColor: isLinkedInHovered ? (isDarkMode ? '#74c4ba'  : '#a7f3d0') : (isDarkMode ? '#74c4ba' : '#a7f3d0'),
               transform: isLinkedInHovered ? 'scale(1.05)' : 'scale(1)',
             }}
             onMouseEnter={() => setLinkedInHovered(true)}
@@ -152,7 +155,7 @@ const MyProfileSection: React.FC = () => {
             <FaLinkedin
               style={{
                 marginRight: '5px',
-                color: '#5c5c5c',
+                color: isDarkMode ? '#e3e4e6' : '#5c5c5c',
                 fontSize: '1.4rem',
               }}
             />

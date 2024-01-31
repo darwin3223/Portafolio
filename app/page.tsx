@@ -1,4 +1,8 @@
-import { Metadata } from "next";
+/* eslint-disable @next/next/no-img-element */
+"use client"
+import React, { useState } from 'react';
+import { FaRegMoon } from "react-icons/fa";
+import { IoSunnySharp } from "react-icons/io5";
 
 import AboutMeSection from './components/AboutMeSection';
 import CopyrightsSection from './components/CopyrightsSection';
@@ -9,38 +13,30 @@ import ProjectPortafolio from './components/ProjectsSection/Portafolio';
 import SocialSection from './components/SocialSection';
 import ContactSection from './components/ContactSection';
 import CenterComponent from './components/CenterComponent';
-import MyProfileSection from  './components/MyProfileSection';
-import  HeaderTopSection from  './components/HeaderTopSection';
+import MyProfileSection from './components/MyProfileSection';
+import HeaderTopSection from './components/HeaderTopSection';
 
 export default function About() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-
-  const theme = {
-  
+  const toggleTheme = () => {
+    setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode);
   };
+
   return (
-
-    <div style={{ 
-      backgroundColor: "#000000"
-    }}>
-  
-
-   <CenterComponent >
-   <HeaderTopSection />
-    <MyProfileSection /> 
-      <Separador />
-      <AboutMeSection /> 
-      <ProjectWeb />
-      <ProjectAndroid />
-      <ProjectPortafolio/>
-      <SocialSection />  
-      <ContactSection />  
-      <CopyrightsSection />
+    <div style={{ backgroundColor: isDarkMode ? '#1f2937' : '#FFFFFF' }}>
+      <CenterComponent isDarkMode={isDarkMode} toggleTheme={toggleTheme} >
+        <HeaderTopSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+        <MyProfileSection isDarkMode={isDarkMode} toggleTheme={toggleTheme}  />
+        <Separador isDarkMode={isDarkMode} toggleTheme={toggleTheme}/>
+        <AboutMeSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+        <ProjectWeb isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+        <ProjectAndroid isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+        <ProjectPortafolio isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+        <SocialSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+        <ContactSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+        <CopyrightsSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       </CenterComponent>
-
-    
     </div>
-    
-    
   );
 }

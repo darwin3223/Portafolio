@@ -3,17 +3,21 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-const ProjectsSection: React.FC = () => {
+interface ProjectsSectionProps {
+  isDarkMode: boolean;
+}
+
+const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isDarkMode }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const containerStyle = {
     borderRadius: '10px',
     overflow: 'hidden',
-    marginTop: '20px',  // Ajustado en comparación con el primer código
+    marginTop: '20px',  
     position: 'relative',
-    backgroundColor: '#effaf6',
-    height: '200px',  // Ajustado en comparación con el primer código
-    width: '320px',   // Ajustado en comparación con el primer código
+    backgroundColor: isDarkMode ? '#2b3544' : '#effaf6',
+    height: '200px',  
+    width: '320px',   
     display: 'flex',
     flexDirection: 'row',
   };
@@ -31,27 +35,26 @@ const ProjectsSection: React.FC = () => {
 
   const titleStyle = {
     flex: 1,
-    color: '#000000',
+    color: isDarkMode ? '#f1f5f9' : '#000000',
     marginLeft: '20px',
     marginTop: "25px",
-    fontSize: '1.5rem',  // Ajustado en comparación con el primer código
+    fontSize: '1.5rem',  
     fontWeight: 'bold',
     fontFamily: 'Archivo, sans-serif',
-    display: 'flex',     // Ajustado en comparación con el primer código
-    alignItems: 'center',  // Ajustado en comparación con el primer código
+    display: 'flex',     
+    alignItems: 'center',  
   };
 
   const descriptionStyle = {
     flex: 1,
-    color: '#000000',
+    color: isDarkMode ? '#f1f5f9' : '#000000',
     marginTop: '5px',
     marginLeft: '20px',
   };
 
   return (
     <div style={{ marginTop: '20px' }}>
-     
-        <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex' }}>
         <a href="https://github.com/darwin3223/Portafolio" target="_blank" rel="noopener noreferrer">
           <div className="project-container" style={containerStyle}>
             <Image
@@ -65,15 +68,14 @@ const ProjectsSection: React.FC = () => {
               onMouseLeave={() => setIsHovered(false)}
             />
           </div>
-          </a>
-          <div>
-            <h1 style={titleStyle}>Portafolio Personal</h1>
-            <h1 style={descriptionStyle}>
-            Portafolio personal con diferentes tipos de aplicaciones desarolladas.
-            </h1>
-          </div>
+        </a>
+        <div>
+          <h1 style={titleStyle}>Portafolio Personal</h1>
+          <h1 style={descriptionStyle}>
+            Portafolio personal con diferentes tipos de aplicaciones desarrolladas.
+          </h1>
         </div>
- 
+      </div>
       <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap" rel="stylesheet" />
     </div>
   );

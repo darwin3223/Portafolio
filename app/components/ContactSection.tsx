@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaRegCopy } from "react-icons/fa";
 
-const ContactSection = () => {
+const ContactSection = ({ isDarkMode }) => {
   const [copied, setCopied] = useState(false);
   const [isCopyHovered, setCopyHovered] = useState(false);
 
@@ -12,14 +12,13 @@ const ContactSection = () => {
     navigator.clipboard.writeText("darwinalves1234@gmail.com");
     setCopied(true);
 
-    // Después de 2 segundos, restablece el estado a "no copiado"
     setTimeout(() => {
       setCopied(false);
     }, 2000);
   };
 
   return (
-    <div style={{ marginTop: '40px', width: '100%' }}>
+    <div style={{ marginTop: '40px', width: '100%', color: isDarkMode ? '#fff' : '#000' }}>
       <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
         <p style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#32beb7' }}>
           Contacto
@@ -29,7 +28,7 @@ const ContactSection = () => {
       
       <div
         style={{
-          backgroundColor: '#f0f0f0',
+          backgroundColor: isDarkMode ? '#2b3544' : '#f0f0f0',
           borderRadius: '5px',
           padding: '8px',
           display: 'flex',
@@ -38,7 +37,7 @@ const ContactSection = () => {
           marginTop: '10px',
         }}
       >
-        <span style={{ marginRight: '10px', color: 'black' }}>darwinalves1234@gmail.com</span>
+        <span style={{ marginRight: '10px', color: isDarkMode ? '#fff' : 'black' }}>darwinalves1234@gmail.com</span>
         
       </div>
       <div
@@ -50,7 +49,7 @@ const ContactSection = () => {
           display: 'flex',
           alignItems: 'center',
           width: '6%',
-          marginTop: '-38px',
+          marginTop: '-37.5px',
           cursor: 'pointer',
           transition: 'background-color 0.3s ease, transform 0.3s ease',
           transform: isCopyHovered ? 'scale(1.05)' : 'scale(1)',
@@ -59,7 +58,7 @@ const ContactSection = () => {
         onMouseLeave={() => setCopyHovered(false)}
         onClick={copyToClipboard}
       >
-        <FaRegCopy style={{ color: 'black' }} />
+        <FaRegCopy style={{ color: isDarkMode ? '#2b3544': '#2b3544' }} />
       </div>
       {copied && (
         <div style={{ marginLeft: '10px', color: 'green', fontWeight: 'bold' }}>
