@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
 import React, { useState } from 'react';
-import { FaRegMoon } from "react-icons/fa";
-import { IoSunnySharp } from "react-icons/io5";
+
 
 import AboutMeSection from './components/AboutMeSection';
 import CopyrightsSection from './components/CopyrightsSection';
