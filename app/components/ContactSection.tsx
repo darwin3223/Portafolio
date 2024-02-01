@@ -9,7 +9,7 @@ const ContactSection = ({ isDarkMode }) => {
   const [isCopyHovered, setCopyHovered] = useState(false);
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText("darwinalves1234@gmail.com");
+    navigator.clipboard.writeText("darwinalveswork@gmail.com");
     setCopied(true);
 
     setTimeout(() => {
@@ -37,7 +37,7 @@ const ContactSection = ({ isDarkMode }) => {
           marginTop: '10px',
         }}
       >
-        <span style={{ marginRight: '10px', color: isDarkMode ? '#fff' : 'black' }}>darwinalves1234@gmail.com</span>
+        <span style={{ marginRight: '10px', color: isDarkMode ? '#fff' : 'black' }}>darwinalveswork@gmail.com</span>
         
       </div>
       <div
