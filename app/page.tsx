@@ -9,6 +9,7 @@ import Separador from './components/Separador';
 import ProjectWeb from './components/ProjectsSection/Web-Aplication';
 import ProjectAndroid from './components/ProjectsSection/Android-Aplication';
 import ProjectPortafolio from './components/ProjectsSection/Portafolio';
+import ProjectPasswordGenerator from './components/ProjectsSection/PasswordGenerator';
 import SocialSection from './components/SocialSection';
 import ContactSection from './components/ContactSection';
 import CenterComponent from './components/CenterComponent';
@@ -32,6 +33,7 @@ export default function About() {
         <ProjectWeb isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         <ProjectAndroid isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         <ProjectPortafolio isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+        <ProjectPasswordGenerator isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         <SocialSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         <ContactSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         <CopyrightsSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />

@@ -59,10 +59,11 @@ const ContactSection = ({ isDarkMode }) => {
         onClick={copyToClipboard}
       >
         <FaRegCopy style={{ color: isDarkMode ? '#2b3544': '#2b3544' }} />
+        
       </div>
       {copied && (
         <div style={{ marginLeft: '10px', color: 'green', fontWeight: 'bold' }}>
-          Copiado
+     
         </div>
       )}
     </div>

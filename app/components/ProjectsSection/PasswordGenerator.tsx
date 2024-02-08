@@ -2,11 +2,6 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { PiSuitcaseSimpleFill } from 'react-icons/pi';
-import { TbFileTypeSql } from "react-icons/tb";
-import { FaJava } from "react-icons/fa6";
-import { FaCss3Alt } from "react-icons/fa";
-import { IoLogoHtml5 } from "react-icons/io5";
 
 interface ProjectsSectionProps {
   isDarkMode: boolean;
@@ -18,11 +13,11 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isDarkMode }) => {
   const containerStyle = {
     borderRadius: '10px',
     overflow: 'hidden',
-    marginTop: '20px',
+    marginTop: '20px',  
     position: 'relative',
     backgroundColor: isDarkMode ? '#2b3544' : '#effaf6',
-    height: '200px',
-    width: '320px',
+    height: '200px',  
+    width: '320px',   
     display: 'flex',
     flexDirection: 'row',
   };
@@ -43,11 +38,11 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isDarkMode }) => {
     color: isDarkMode ? '#f1f5f9' : '#000000',
     marginLeft: '20px',
     marginTop: "25px",
-    fontSize: '1.5rem',
+    fontSize: '1.5rem',  
     fontWeight: 'bold',
     fontFamily: 'Archivo, sans-serif',
-    display: 'flex',
-    alignItems: 'center',
+    display: 'flex',     
+    alignItems: 'center',  
   };
 
   const descriptionStyle = {
@@ -58,16 +53,12 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isDarkMode }) => {
   };
 
   return (
-    <div style={{ marginTop: '40px' }}>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <p style={{ fontSize: '1.2rem', fontWeight: 'bold', color: isDarkMode ? '#74c4ba' : '#32beb7' }}>Proyectos</p>
-        <PiSuitcaseSimpleFill style={{ marginLeft: '8px', marginTop: '-0px', fontSize: '1.9rem', color: isDarkMode ? '#74c4ba' : '#32beb7' }} />
-      </div>
+    <div style={{ marginTop: '20px' }}>
       <div style={{ display: 'flex' }}>
-        <a href="https://github.com/darwin3223/PFT-Web-Aplication/tree/master/PFT" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/darwin3223/Password-Generator" target="_blank" rel="noopener noreferrer">
           <div className="project-container" style={containerStyle}>
             <Image
-              src="/images/Web-Aplication.jpg"
+              src="/images/PasswordGenerator.jpg"
               alt="Web App Project"
               width={400}
               height={400}
@@ -79,19 +70,11 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isDarkMode }) => {
           </div>
         </a>
         <div>
-          <h1 style={titleStyle}>UTEC Aplicación Web </h1>
+          <h1 style={titleStyle}>Generador Contraseña </h1>
           <h1 style={descriptionStyle}>
-            Aplicación Web para la gestión
-            de usuarios de la universidad de UTEC.
+           Generador de contraseñas basado en frases, símbolos, números y letras.
           </h1>
-          <div style={{ marginLeft: '15px', marginTop: '10px', fontSize: '1.5rem', display: 'flex', alignItems: 'center' }}>
-  <FaJava style={{ marginRight: '5px', color: '#5382a1' }} />
-  <IoLogoHtml5 style={{ marginRight: '5px', color: '#e44d26' }} />
-  <FaCss3Alt style={{ marginRight: '5px', color: '#2965f1' }} />
-  <TbFileTypeSql style={{ marginRight: '5px', color: '#00758F' }} />
-</div>
         </div>
-        
       </div>
       <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap" rel="stylesheet" />
     </div>
