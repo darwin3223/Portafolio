@@ -3,10 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { PiSuitcaseSimpleFill } from 'react-icons/pi';
-import { TbFileTypeSql } from "react-icons/tb";
-import { FaJava } from "react-icons/fa6";
-import { FaCss3Alt } from "react-icons/fa";
-import { IoLogoHtml5 } from "react-icons/io5";
+import { Tooltip } from '@nextui-org/react';
+
 
 interface ProjectsSectionProps {
   isDarkMode: boolean;
@@ -57,6 +55,12 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isDarkMode }) => {
     marginLeft: '20px',
   };
 
+
+  const toolTipStyle = {
+    backgroundColor: isDarkMode ? '#000000' : '#ffffff',
+    color: isDarkMode ? '#ffffff' : '#000000',
+
+  };
   return (
     <div style={{ marginTop: '40px' }}>
       <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -84,14 +88,98 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isDarkMode }) => {
             Aplicación Web para la gestión
             de usuarios de la universidad de UTEC.
           </h1>
-          <div style={{ marginLeft: '15px', marginTop: '10px', fontSize: '1.5rem', display: 'flex', alignItems: 'center' }}>
-  <FaJava style={{ marginRight: '5px', color: '#5382a1' }} />
-  <IoLogoHtml5 style={{ marginRight: '5px', color: '#e44d26' }} />
-  <FaCss3Alt style={{ marginRight: '5px', color: '#2965f1' }} />
-  <TbFileTypeSql style={{ marginRight: '5px', color: '#00758F' }} />
+          
+        <div style={{ marginLeft: '20px', marginTop: '10px', fontSize: '1.5rem', display: 'flex', alignItems: 'center' }}>
+       
+        <Tooltip
+         
+          content="Java"
+          placement="bottom"
+          style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+        >
+        <Image
+    src="/svg/JavaIcon.svg"
+    alt="HTML Icon"
+    width={30}
+    height={30}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+    </Tooltip>
+
+
+    <Tooltip
+        
+          content="HTML"
+          placement="bottom"
+          style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+        >
+    <Image
+    src="/svg/Htmlcon.svg"
+    alt="HTML Icon"
+    width={30}
+    height={30}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  /> 
+  </Tooltip>
+       
+  
+  
+  <Tooltip
+        
+        content="CSS"
+        placement="bottom"
+        style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+      >
+  <Image
+    src="/svg/CssIcon.svg"
+    alt="CSS Icon"
+    width={30}
+    height={30}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+  </Tooltip>
+
+  <Tooltip
+        
+        content="GitHub"
+        placement="bottom"
+        style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+      >
+  <Image
+    src="/svg/GitHubIcon.svg"
+    alt="GitHub Icon"
+    width={24}
+    height={24}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+  </Tooltip>
+  <Tooltip
+        
+        content="SQL"
+        placement="bottom"
+        style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+      >
+  <Image
+    src="/svg/SqlIcon.svg"
+    alt="SQL Icon"
+    width={25}
+    height={25}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+  </Tooltip>
+  
 </div>
         </div>
-        
       </div>
       <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap" rel="stylesheet" />
     </div>

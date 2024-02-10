@@ -2,7 +2,7 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { SiKotlin } from "react-icons/si";
+import { Tooltip } from '@nextui-org/react';
 
 interface ProjectsSectionProps {
   isDarkMode: boolean;
@@ -75,6 +75,56 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isDarkMode }) => {
           <h1 style={descriptionStyle}>
             Aplicación Android para la gestión <br /> de usuarios de la universidad de UTEC.
           </h1>
+          <div style={{ marginLeft: '20px', marginTop: '10px', fontSize: '1.5rem', display: 'flex', alignItems: 'center' }}>
+       <Tooltip
+        
+        content="Kotlin"
+        placement="bottom"
+        style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+      >
+  <Image
+    src="/svg/KotlinIcon.svg"
+    alt="Kotlin Icon"
+    width={28}
+    height={28}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+  </Tooltip>
+  <Tooltip
+        
+        content="GitHub"
+        placement="bottom"
+        style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+      >
+  <Image
+    src="/svg/GitHubIcon.svg"
+    alt="GitHub Icon"
+    width={24}
+    height={24}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+  </Tooltip>
+  <Tooltip
+        
+        content="SQL"
+        placement="bottom"
+        style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+      >
+  <Image
+    src="/svg/SqlIcon.svg"
+    alt="SQL Icon"
+    width={25}
+    height={25}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+  </Tooltip>
+</div>
         </div>
       </div>
       <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap" rel="stylesheet" />

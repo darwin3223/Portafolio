@@ -2,6 +2,7 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { Tooltip } from '@nextui-org/react';
 
 interface ProjectsSectionProps {
   isDarkMode: boolean;
@@ -74,8 +75,92 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isDarkMode }) => {
           <h1 style={descriptionStyle}>
             Portafolio personal con diferentes tipos de aplicaciones desarrolladas.
           </h1>
+          <div style={{ marginLeft: '20px', marginTop: '10px', fontSize: '1.5rem', display: 'flex', alignItems: 'center' }}>
+          <Tooltip
+        
+        content="Next.js"
+        placement="bottom"
+        style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+      >
+  <Image
+    src="/svg/NextIcon.svg"
+    alt="NextIcon"
+    width={27}
+    height={27}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+  </Tooltip>
+       <Tooltip
+        
+        content="TypeScript"
+        placement="bottom"
+        style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+      >
+  <Image
+    src="/svg/TypeScriptIcon.svg"
+    alt="TypeScriptIcon"
+    width={28}
+    height={28}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+  </Tooltip>
+  <Tooltip
+        
+        content="JavaScript"
+        placement="bottom"
+        style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+      >
+  <Image
+    src="/svg/JavaScriptIcon.svg"
+    alt="JavaScrip Icon"
+    width={24}
+    height={24}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+  </Tooltip>
+  <Tooltip
+        
+        content="CSS"
+        placement="bottom"
+        style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+      >
+  <Image
+    src="/svg/CssIcon.svg"
+    alt="CSS ICON"
+    width={27}
+    height={27}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+  </Tooltip>
+  <Tooltip
+        
+        content="GitHub"
+        placement="bottom"
+        style={{color:isDarkMode ? '#ffffff' : '#000000' }}
+      >
+  <Image
+    src="/svg/GitHubIcon.svg"
+    alt="GitHub Icon"
+    width={24}
+    height={24}
+    className="ICON"
+    draggable="false"
+    style={{ marginRight: '3px' }}
+  />
+  </Tooltip>
+</div>
         </div>
+       
       </div>
+      
       <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap" rel="stylesheet" />
     </div>
   );
