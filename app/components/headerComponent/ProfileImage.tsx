@@ -12,7 +12,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ isDarkMode }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 200); // Puedes ajustar este valor según tus necesidades
+      setIsVisible(window.scrollY > 200);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -41,7 +41,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ isDarkMode }) => {
     <motion.div
       style={{
         marginLeft: "-601px",
-        marginTop: "0px",
+        marginBottom: "10px",
       }}
       animate={controls}
     >

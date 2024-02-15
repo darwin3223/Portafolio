@@ -3,8 +3,14 @@
 import React, { useState } from 'react';
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaRegCopy } from "react-icons/fa";
+import { Tooltip } from '@nextui-org/react';
 
-const ContactSection = ({ isDarkMode }) => {
+interface ContactSectionProps {
+  isDarkMode: boolean;
+  language: string;
+}
+
+const ContactSection: React.FC<ContactSectionProps> = ({ isDarkMode, language }) => {
   const [copied, setCopied] = useState(false);
   const [isCopyHovered, setCopyHovered] = useState(false);
 
@@ -20,10 +26,10 @@ const ContactSection = ({ isDarkMode }) => {
   return (
     <div style={{ marginTop: '40px', width: '100%', color: isDarkMode ? '#fff' : '#000' }}>
       <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-        <p style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#32beb7' }}>
-          Contacto
+        <p style={{ fontSize: '1.2rem', fontWeight: 'bold', color: isDarkMode ? '#74c4ba' : '#32beb7' }}>
+          {language === 'ES' ? 'Contacto' : 'Contact'}
         </p>
-        <MdOutlineMailOutline style={{ marginLeft: '6px', marginTop: '0px', fontSize: '1.9rem', color: '#32beb7' }} />
+        <MdOutlineMailOutline style={{ marginLeft: '6px', marginTop: '0px', fontSize: '1.9rem', color: isDarkMode ? '#74c4ba' : '#32beb7' }} />
       </div>
       
       <div
@@ -38,8 +44,8 @@ const ContactSection = ({ isDarkMode }) => {
         }}
       >
         <span style={{ marginRight: '10px', color: isDarkMode ? '#fff' : 'black' }}>darwinalveswork@gmail.com</span>
-        
       </div>
+
       <div
         style={{
           marginLeft: '548px',
@@ -59,12 +65,14 @@ const ContactSection = ({ isDarkMode }) => {
         onClick={copyToClipboard}
       >
         <FaRegCopy style={{ color: isDarkMode ? '#2b3544': '#2b3544' }} />
-        
       </div>
+
       {copied && (
-        <div style={{ marginLeft: '10px', color: 'green', fontWeight: 'bold' }}>
-     
-        </div>
+        <Tooltip
+          content={language === 'ES' ? '¡Copiado!' : 'Copied!'}
+          placement="bottom"
+          style={{ color: isDarkMode ? '#ffffff' : '#000000' }}
+        />
       )}
     </div>
   );

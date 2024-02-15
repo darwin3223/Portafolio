@@ -8,38 +8,35 @@ import HeaderProfile from './headerComponent/ProfileImage';
 interface HeaderTopSectionProps {
   isDarkMode: boolean;
   toggleTheme: () => void;
+  toggleLanguage: () => void;
+  language: string;
 }
 
-const HeaderTopSection: React.FC<HeaderTopSectionProps> = ({ isDarkMode, toggleTheme }) => {
+const HeaderTopSection: React.FC<HeaderTopSectionProps> = ({ isDarkMode, toggleTheme, toggleLanguage, language }) => {
   const [currentLetter, setCurrentLetter] = useState(<TbLetterSSmall />);
-  const [language, setLanguage] = useState('ES'); 
 
   useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.key === 'S') {
-        setCurrentLetter(<TbLetterSSmall />);
-      }
-    };
+    // Actualizar la letra actual según el idioma seleccionado
+    if (language === 'ES') {
+      setCurrentLetter(<TbLetterSSmall />);
+    } else {
+      setCurrentLetter(<TbLetterNSmall />);
+    }
+  }, [language]);
 
+  const handleKeyPress = (event: KeyboardEvent) => {
+    if (event.key === 'S') {
+      setCurrentLetter(<TbLetterSSmall />);
+    }
+  };
+
+  useEffect(() => {
     window.addEventListener('keydown', handleKeyPress);
 
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
   }, []);
-
-  const toggleLanguage = () => {
-    // Alternar entre 'ES' y 'EN'
-    const newLanguage = language === 'ES' ? 'EN' : 'ES';
-    setLanguage(newLanguage);
-
-    // Cambiar la letra actual según el idioma seleccionado
-    if (newLanguage === 'ES') {
-      setCurrentLetter(<TbLetterSSmall />);
-    } else {
-      setCurrentLetter(<TbLetterNSmall />);
-    }
-  };
 
   return (
     <div

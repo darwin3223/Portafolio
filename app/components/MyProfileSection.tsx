@@ -4,9 +4,10 @@ import { FaRegFilePdf, FaLinkedin } from 'react-icons/fa';
 
 interface MyProfileSectionProps {
   isDarkMode: boolean;
+  language: string;
 }
 
-const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode }) => {
+const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode, language }) => {
   const [isResumeHovered, setResumeHovered] = useState(false);
   const [isLinkedInHovered, setLinkedInHovered] = useState(false);
 
@@ -26,11 +27,14 @@ const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode }) => {
     transition: 'background-color 0.3s, transform 0.2s',
   };
 
-  const resumeLink = "https://drive.google.com/file/d/1x_Ocphr01iijq7RGvzdk7Q2RcWeod7AU/view?usp=sharing";
+  const resumeLinks = {
+    EN: "https://drive.google.com/file/d/1w1a4vdu01Z1I2QhFytxXoDM_wuuaX0CM/view?usp=sharing",
+    ES: "https://drive.google.com/file/d/1x_Ocphr01iijq7RGvzdk7Q2RcWeod7AU/view?usp=sharing",
+  };
   const linkedinLink = "https://www.linkedin.com/in/darwin-alves";
 
   const openResume = () => {
-    window.open(resumeLink, '_blank');
+    window.open(resumeLinks[language], '_blank');
   };
 
   return (
@@ -110,7 +114,7 @@ const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode }) => {
             color: isDarkMode ? '#f1f5f9' : '#7d7d7d',
           }}
         >
-          Soy técnico IT, bienvenido a mi portafolio web.
+          {language === 'EN' ? 'I am an IT technician, welcome to my web portfolio.' : 'Soy técnico IT, bienvenido a mi portafolio web.'}
         </p>
         <div
           style={{
@@ -120,7 +124,7 @@ const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode }) => {
           }}
         >
           <a
-            href={resumeLink}
+             href={resumeLinks[language]}
             target="_blank"
             style={{
               ...linkStyle,
@@ -138,7 +142,7 @@ const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode }) => {
                 fontSize: '1.4rem',
               }}
             />
-            Currículum
+            {language === 'EN' ? 'Resume' : 'Currículum'}
           </a>
 
           <a

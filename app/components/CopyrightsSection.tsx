@@ -3,6 +3,11 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
+interface CopyrightsSectionProps {
+  isDarkMode: boolean;
+  language: string;
+}
+
 const footerStyle = {
   bottom: '0',
   fontWeight: 'bold',
@@ -16,8 +21,8 @@ const footerStyle = {
 
 const darkFooterStyle = {
   ...footerStyle,
-  backgroundColor: '#1f2937', 
-  color: '#fff', 
+  backgroundColor: '#1f2937',
+  color: '#fff',
 };
 
 const grayClickableText = {
@@ -29,7 +34,7 @@ const grayClickableText = {
 
 const darkGrayClickableText = {
   ...grayClickableText,
-  color: '#a7f3d0', // Cambia al color de enlace en modo oscuro
+  color: '#a7f3d0', // Change to the link color in dark mode
 };
 
 const centerFooterStyle = {
@@ -38,7 +43,7 @@ const centerFooterStyle = {
   alignItems: 'center',
 };
 
-const CopyrightsSection: React.FC = ({ isDarkMode }) => {
+const CopyrightsSection: React.FC<CopyrightsSectionProps> = ({ isDarkMode, language }) => {
   const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
@@ -60,9 +65,9 @@ const CopyrightsSection: React.FC = ({ isDarkMode }) => {
     <footer style={{ ...footerStyle, ...((isDarkMode && showFooter) ? darkFooterStyle : {}), bottom: showFooter ? '0' : '-100px' }}>
       <div style={centerFooterStyle}>
         <p style={{ fontSize: '0.8rem', color: isDarkMode ? '#7ac7c1' : '#7ac7c1' }}>
-          Copyright {new Date().getFullYear()} @ Casi todos los derechos reservados{' '}
+          {language === 'ES' ? 'Copyright' : 'Copyright'} {new Date().getFullYear()} @ {language === 'ES' ? 'Casi todos los derechos reservados' : 'Almost all rights reserved'}{' '}
           <Link href="https://www.linkedin.com/in/darwin-alves" target="_blank">
-            <span style={isDarkMode ? darkGrayClickableText : grayClickableText}>Darwin Alves</span>
+            <span style={isDarkMode ? darkGrayClickableText : grayClickableText}>{language === 'ES' ? 'Darwin Alves' : 'Darwin Alves'}</span>
           </Link>
         </p>
       </div>

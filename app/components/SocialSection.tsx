@@ -4,7 +4,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { TiSocialAtCircular } from "react-icons/ti";
-import { FaStarHalfAlt } from "react-icons/fa";
 
 const SocialContainer = styled.div`
   margin-top: 40px;

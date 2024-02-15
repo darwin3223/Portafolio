@@ -1,8 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client"
 import React, { useState } from 'react';
-
-
 import AboutMeSection from './components/AboutMeSection';
 import CopyrightsSection from './components/CopyrightsSection';
 import Separador from './components/Separador';
@@ -18,25 +15,65 @@ import HeaderTopSection from './components/HeaderTopSection';
 
 export default function About() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [language, setLanguage] = useState('ES'); // Puedes establecer el idioma predeterminado aquí
 
   const toggleTheme = () => {
     setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode);
   };
 
+  const toggleLanguage = () => {
+    setLanguage((prevLanguage) => (prevLanguage === 'ES' ? 'EN' : 'ES'));
+  };
+
   return (
     <div style={{ backgroundColor: isDarkMode ? '#1f2937' : '#FFFFFF' }}>
-      <CenterComponent isDarkMode={isDarkMode} toggleTheme={toggleTheme} >
-        <HeaderTopSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-        <MyProfileSection isDarkMode={isDarkMode} toggleTheme={toggleTheme}  />
-        <Separador isDarkMode={isDarkMode} toggleTheme={toggleTheme}/>
-        <AboutMeSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-        <ProjectWeb isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-        <ProjectAndroid isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-        <ProjectPortafolio isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-        <ProjectPasswordGenerator isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-        <SocialSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-        <ContactSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-        <CopyrightsSection isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+      <CenterComponent isDarkMode={isDarkMode} toggleTheme={toggleTheme}>
+        <HeaderTopSection
+          isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          toggleLanguage={toggleLanguage}
+          language={language}
+        />
+        <MyProfileSection  isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          toggleLanguage={toggleLanguage}
+          language={language} />
+        <Separador  isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          toggleLanguage={toggleLanguage}
+          language={language}/>
+        <AboutMeSection  isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          toggleLanguage={toggleLanguage}
+          language={language} />
+        <ProjectWeb  isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          toggleLanguage={toggleLanguage}
+          language={language} />
+        <ProjectAndroid  isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          toggleLanguage={toggleLanguage}
+          language={language} />
+        <ProjectPortafolio  isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          toggleLanguage={toggleLanguage}
+          language={language}/>
+        <ProjectPasswordGenerator  isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          toggleLanguage={toggleLanguage}
+          language={language} />
+        <SocialSection isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          toggleLanguage={toggleLanguage}
+          language={language} />
+        <ContactSection  isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          toggleLanguage={toggleLanguage}
+          language={language} />
+        <CopyrightsSection  isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          toggleLanguage={toggleLanguage}
+          language={language} />
       </CenterComponent>
     </div>
   );
