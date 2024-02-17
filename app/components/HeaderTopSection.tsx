@@ -70,7 +70,7 @@ const HeaderTopSection: React.FC<HeaderTopSectionProps> = ({ isDarkMode, toggleT
       <div style={{ marginLeft: '-15px', fontSize: '1.4rem', display: 'flex', alignItems: 'center', marginTop: "-25px" }}>
         {currentLetter}
       </div>
-      <HeaderProfile isDarkMode={isDarkMode} toggleTheme={toggleTheme} language={language} />
+      <HeaderProfile isDarkMode={isDarkMode} language={language} />
     </div>
   );
 };

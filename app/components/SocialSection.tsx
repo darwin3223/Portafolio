@@ -1,9 +1,13 @@
 // components/SocialSection.js
-"use client";
+
 import React from 'react';
 import styled from 'styled-components';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { TiSocialAtCircular } from "react-icons/ti";
+
+interface SocialSectionProps {
+  isDarkMode: boolean;
+}
 
 const SocialContainer = styled.div`
   margin-top: 40px;
@@ -21,7 +25,7 @@ const SocialButtonContainer = styled.div`
   margin-top: 14px;
 `;
 
-const SocialButton = styled.a`
+const SocialButton = styled.a<{ isDarkMode: boolean }>`
   background-color: ${(props) => (props.isDarkMode ? '#2b3544' : '#fff')};
   padding: 15px 20px;
   border: none;
@@ -40,19 +44,19 @@ const SocialButton = styled.a`
   }
 `;
 
-const SocialIcon = styled.div`
+const SocialIcon = styled.div<{ iconColor: string; isDarkMode: boolean }>`
   margin-right: 10px;
   font-size: 1.5rem;
   color: ${(props) => (props.iconColor || (props.isDarkMode ? '#fff' : '#000'))};
 `;
 
-const SocialTextContent = styled.span`
+const SocialTextContent = styled.span<{ textColor: string; isDarkMode: boolean }>`
   font-size: 1rem;
   font-weight: bold;
   color: ${(props) => (props.textColor || (props.isDarkMode ? '#fff' : '#000'))};
 `;
 
-const SocialSection = ({ isDarkMode }) => {
+const SocialSection: React.FC<SocialSectionProps> = ({ isDarkMode }) => {
   return (
     <SocialContainer>
       <div style={{ display: 'flex', alignItems: 'center' }}>

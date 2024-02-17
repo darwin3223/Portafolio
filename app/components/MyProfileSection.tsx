@@ -4,7 +4,7 @@ import { FaRegFilePdf, FaLinkedin } from 'react-icons/fa';
 
 interface MyProfileSectionProps {
   isDarkMode: boolean;
-  language: string;
+  language: 'EN' | 'ES'; // Asegura que language solo puede ser 'EN' o 'ES'
 }
 
 const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode, language }) => {

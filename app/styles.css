@@ -1,0 +1,14 @@
+/* styles.css */
+
+/* Estilos generales para todos los tamaños de pantalla */
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media only screen and (max-width: 600px) {
+    /* Agrega estilos específicos para pantallas pequeñas aquí */
+    body {
+      font-size: 14px;
+    }
+  
+    /* Otros estilos para pantallas pequeñas */
+  }
+  

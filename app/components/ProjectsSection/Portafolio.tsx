@@ -12,7 +12,7 @@ interface ProjectsSectionProps {
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isDarkMode, language }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const containerStyle = {
+  const containerStyle: React.CSSProperties = {
     borderRadius: '10px',
     overflow: 'hidden',
     marginTop: '20px',

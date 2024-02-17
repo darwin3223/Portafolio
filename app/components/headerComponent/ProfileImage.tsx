@@ -4,6 +4,8 @@ import { motion, useAnimation } from 'framer-motion';
 
 interface ProfileImageProps {
   isDarkMode: boolean;
+  language: string;
+  
 }
 
 const ProfileImage: React.FC<ProfileImageProps> = ({ isDarkMode }) => {

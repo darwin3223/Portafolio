@@ -8,7 +8,7 @@ interface AboutMeSectionProps {
 }
 
 const AboutMeSection: React.FC<AboutMeSectionProps> = ({ isDarkMode, language }) => {
-  const sectionStyle = {
+  const sectionStyle: React.CSSProperties = {
     position: 'relative',
     display: 'flex',
     alignItems: 'flex-start',

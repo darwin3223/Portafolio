@@ -8,7 +8,7 @@ interface CopyrightsSectionProps {
   language: string;
 }
 
-const footerStyle = {
+const footerStyle : React.CSSProperties = {
   bottom: '0',
   fontWeight: 'bold',
   padding: '15px',
