@@ -18,6 +18,7 @@ const CenterComponent: React.FC<CenterComponentProps> = ({ children, isDarkMode 
         color: isDarkMode ? '#fff' : '#000',
         maxWidth: '800px',
         margin: '0 auto',
+        zIndex: '800',
       }}
     >
       {children}

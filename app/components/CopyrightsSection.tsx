@@ -34,7 +34,7 @@ const grayClickableText = {
 
 const darkGrayClickableText = {
   ...grayClickableText,
-  color: '#a7f3d0', // Change to the link color in dark mode
+  color: '#a7f3d0', 
 };
 
 const centerFooterStyle = {
@@ -62,10 +62,10 @@ const CopyrightsSection: React.FC<CopyrightsSectionProps> = ({ isDarkMode, langu
   }, []);
 
   return (
-    <footer style={{ ...footerStyle, ...((isDarkMode && showFooter) ? darkFooterStyle : {}), bottom: showFooter ? '0' : '-100px' }}>
+    <footer style={{ ...footerStyle, ...((isDarkMode && showFooter) ? darkFooterStyle : {}), bottom: showFooter ? '0' : '-150px' }}>
       <div style={centerFooterStyle}>
         <p style={{ fontSize: '0.8rem', color: isDarkMode ? '#7ac7c1' : '#7ac7c1' }}>
-          {language === 'ES' ? 'Copyright' : 'Copyright'} {new Date().getFullYear()} @ {language === 'ES' ? 'Casi todos los derechos reservados' : 'Almost all rights reserved'}{' '}
+          {language === 'ES' ? 'Copyright' : 'Copyright'} {new Date().getFullYear()} @ {language === 'ES'  ? 'Casi todos los derechos reservados' : 'Almost all rights reserved'}{' '}
           <Link href="https://www.linkedin.com/in/darwin-alves" target="_blank">
             <span style={isDarkMode ? darkGrayClickableText : grayClickableText}>{language === 'ES' ? 'Darwin Alves' : 'Darwin Alves'}</span>
           </Link>

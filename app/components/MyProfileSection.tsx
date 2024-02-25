@@ -1,10 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
 import { FaRegFilePdf, FaLinkedin } from 'react-icons/fa';
+import './CSS/MyProfileSection.css'; 
 
 interface MyProfileSectionProps {
   isDarkMode: boolean;
-  language: 'EN' | 'ES'; // Asegura que language solo puede ser 'EN' o 'ES'
+  language: 'EN' | 'ES';
 }
 
 const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode, language }) => {
@@ -38,19 +39,20 @@ const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode, languag
   };
 
   return (
-    <main
+    <main className='main'
+  
       style={{
         display: 'flex',
         width: '100%',
         alignItems: 'center',
         justifyContent: 'flex-start',
         textAlign: 'left',
+        zIndex: '1000',
       }}
     >
-    <div
+    <div className='.ProfileSectionDiv1'
       style={{
-        width: '168px',
-        height: '168px',
+       
         borderRadius: '30%',
         border: `6px solid ${isDarkMode ? '#171e2d' : '#FFFFFF'}`, 
         marginRight: '20px',
@@ -89,19 +91,17 @@ const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode, languag
           </div>
         </div>
       </div>
-      <div
+      <div className='divRight'
         style={{
           display: 'flex',
           flexDirection: 'column',
-          marginTop: '-8px',
           justifyContent: 'left',
-          marginLeft: '1px',
+        
         }}
       >
-        <p
+        <p className='ProfileSectionName'
           style={{
-            fontSize: '2.5rem',
-            fontWeight: 'bold',
+           
             color: isDarkMode ? '#f1f5f9' : '#5c5c5c',
           }}
         >

@@ -15,7 +15,6 @@ import ContactSection from './components/ContactSection';
 import CenterComponent from './components/CenterComponent';
 import MyProfileSection from './components/MyProfileSection';
 import HeaderTopSection from './components/HeaderTopSection';
-import './styles.css';
 
 
 interface CenterComponentProps {
@@ -26,7 +25,7 @@ interface CenterComponentProps {
 
 export default function About() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [language, setLanguage] = useState('ES'); // Puedes establecer el idioma predeterminado aquí
+  const [language, setLanguage] = useState('ES'); 
 
   const toggleTheme = () => {
     setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode);
@@ -39,9 +38,17 @@ export default function About() {
   return (
  
       
-   
+
     
-    <div style={{ backgroundColor: isDarkMode ? '#1f2937' : '#FFFFFF' }}>
+    <div style={{
+      backgroundColor: isDarkMode ? '#1f2937' : '#FFFFFF',
+      width: '100%', 
+      minHeight: '100vh',
+      margin: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      overflow: 'hidden'
+    }}>
     
     <Head>
       
@@ -88,7 +95,7 @@ export default function About() {
          
       </CenterComponent>
   
-    </div>
+      </div>
 
     
   );

@@ -1,0 +1,38 @@
+
+
+p.ProfileSectionName {
+  font-Size: 2.5rem;
+  font-Weight: bold;
+}
+
+.divRight{
+  margin-Top: 8px;
+  margin-Left: -1px;
+ 
+
+}
+@media screen and (max-width: 639px) {
+
+
+  p.ProfileSectionName {
+    font-Size: 1.0rem;
+    font-Weight: bold;
+    margin-top: 280px;
+
+
+  }
+  .divRight{
+    margin-Left: -250px;
+    
+
+  }
+  }
+
+  @media screen and (max-width: 644px) { p.ProfileSectionName {
+    font-Size: 2.0rem;
+    font-Weight: bold;
+    margin-top: px;
+
+
+  }
+}

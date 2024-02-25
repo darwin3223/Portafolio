@@ -24,20 +24,6 @@ const HeaderTopSection: React.FC<HeaderTopSectionProps> = ({ isDarkMode, toggleT
     }
   }, [language]);
 
-  const handleKeyPress = (event: KeyboardEvent) => {
-    if (event.key === 'S') {
-      setCurrentLetter(<TbLetterSSmall />);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleKeyPress);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, []);
-
   return (
     <div
       style={{
