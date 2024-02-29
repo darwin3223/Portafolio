@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-
 interface ProfileImageProps {
   isDarkMode: boolean;
   language: string;
@@ -41,11 +40,13 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ isDarkMode }) => {
 
   return (
     <motion.div
-      style={{
-        marginLeft: "-601px",
-        marginBottom: "10px",
-      }}
+    
       animate={controls}
+      style={
+        {
+      marginLeft: "-610px",
+      marginBottom: "5px",
+      }}
     >
       <div
         style={{
@@ -58,6 +59,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ isDarkMode }) => {
           alignItems: 'center',
           backgroundColor: `${isDarkMode ? '#2b3444' : '#32beb7'}`,
           boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.1)',
+        
         }}
       >
         <div
@@ -72,6 +74,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ isDarkMode }) => {
             backgroundColor: '#32beb7',
             marginLeft: '-3.5px',
             marginTop: '-3.1px',
+        
           }}
         >
           <div
@@ -82,6 +85,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ isDarkMode }) => {
               overflow: 'hidden',
               marginLeft: '-1px',
               marginTop: '-1px',
+           
             }}
           >
             <img
@@ -98,6 +102,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ isDarkMode }) => {
           fontSize: '1.1rem',
           fontWeight: 'bold',
           color: isDarkMode ? '#fff' : '#5c5c5c',
+         
         }}
       >
         Darwin Alves

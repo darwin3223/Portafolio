@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from 'react';
 import { FaRegMoon } from 'react-icons/fa';
 import { IoSunnySharp, IoLanguage } from 'react-icons/io5';
@@ -25,39 +24,28 @@ const HeaderTopSection: React.FC<HeaderTopSectionProps> = ({ isDarkMode, toggleT
   }, [language]);
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        backgroundColor: isDarkMode ? '#1f2937' : '#ffffff',
-        color: isDarkMode ? '#fff' : '#1f2937',
-        marginLeft: '-915px',
-        marginTop: '-100px',
-        paddingRight: '1500px',
-        paddingLeft: '1500px',
-        paddingTop: '15px',
-        paddingBottom: '15px',
-        zIndex: '1000',
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
-      <div
-        style={{ cursor: 'pointer', fontSize: '1.6rem', marginRight: '10px' }}
-        onClick={toggleTheme}
-      >
+   
+<div className={`fixed  inset-x-0 top-0 p-4 flex flex-col md:flex-row items-center bg-${isDarkMode ? '#1f2937' : '#fffff'} text-${isDarkMode ? 'white' : 'gray-900'} z-50 left-3/4 transform -translate-x-1/2 ml-[8px] md:ml-[65px]`}>
+
+
+
+      <div className="sticky cursor-pointer text-2xl mb-[15px] mt-[13px] md:mb-0 md:mr-4" onClick={toggleTheme}>
         {isDarkMode ? <FaRegMoon /> : <IoSunnySharp />}
       </div>
-      <div style={{ cursor: 'pointer', fontSize: '1.6rem', marginLeft: '10px' }} onClick={toggleLanguage}>
+      <div className="sticky cursor-pointer text-2xl ml-[70px] mt-[-39px]  md:mt-[15px] md:ml-[0px]" onClick={toggleLanguage}>
         <IoLanguage />
       </div>
-      <div style={{ marginLeft: '-9px', fontSize: '1.4rem', display: 'flex', alignItems: 'center', marginTop: "-25px" }}>
+      <div className="ml-[85px] mt-[-36px] mb-2 md:ml-[-10px] md:mb-0 text-1.4rem flex items-center md:mt-[-20px]">
         <TbLetterESmall />
       </div>
-      <div style={{ marginLeft: '-15px', fontSize: '1.4rem', display: 'flex', alignItems: 'center', marginTop: "-25px" }}>
-        {currentLetter}
-      </div>
+      <div className="ml-[97px] mt-[-24px] md:ml-[-10px] text-1.4rem flex items-center md:mt-[-20px]">
+  {currentLetter}
+</div> 
+<div className=" ml-[825px] mt-[-30px] md:ml-[0] md:mt-[-1px]">
       <HeaderProfile isDarkMode={isDarkMode} language={language} />
-    </div>
+      </div>
+      </div>
+
   );
 };
 

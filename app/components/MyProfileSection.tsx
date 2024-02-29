@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
 import { FaRegFilePdf, FaLinkedin } from 'react-icons/fa';
-import './CSS/MyProfileSection.css'; 
 
 interface MyProfileSectionProps {
   isDarkMode: boolean;
@@ -39,27 +38,19 @@ const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode, languag
   };
 
   return (
-    <main className='main'
   
+    <main className="flex w-full items-center justify-start text-left z-10  md-[0px] md:mt-[0px]">
+
+    <div 
       style={{
-        display: 'flex',
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        textAlign: 'left',
-        zIndex: '1000',
-      }}
-    >
-    <div className='.ProfileSectionDiv1'
-      style={{
-       
-        borderRadius: '30%',
-        border: `6px solid ${isDarkMode ? '#171e2d' : '#FFFFFF'}`, 
-        marginRight: '20px',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: isDarkMode ? '#333' : '#FFFFFF', 
-        boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.1)',
+    borderRadius: "30%",
+    marginRight: "20px",
+    justifyContent: "center",
+    alignItems: "center",
+    boxShadow: "0 0 10px 5px rgba(0, 0, 0, 0.1)",
+    border: `6px solid ${isDarkMode ? '#171e2d' : '#FFFFFF'}`, 
+    backgroundColor: isDarkMode ? '#333' : '#FFFFFF', 
+      
       }}
     >
         <div
@@ -91,26 +82,20 @@ const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode, languag
           </div>
         </div>
       </div>
-      <div className='divRight'
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'left',
-        
-        }}
+      <div
+    
       >
-        <p className='ProfileSectionName'
+        <p 
           style={{
-           
+            fontSize: "2.5rem",
+            fontWeight: "bold",
             color: isDarkMode ? '#f1f5f9' : '#5c5c5c',
           }}
         >
           Darwin Alves
         </p>
-        <p
+        <p 
           style={{
-            fontSize: '1.0rem',
-            fontWeight: 'normal',
             color: isDarkMode ? '#f1f5f9' : '#7d7d7d',
           }}
         >
