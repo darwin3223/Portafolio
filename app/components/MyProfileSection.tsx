@@ -28,8 +28,8 @@ const MyProfileSection: React.FC<MyProfileSectionProps> = ({ isDarkMode, languag
   };
 
   const resumeLinks = {
-    EN: "https://drive.google.com/file/d/1w1a4vdu01Z1I2QhFytxXoDM_wuuaX0CM/view?usp=sharing",
-    ES: "https://drive.google.com/file/d/1x_Ocphr01iijq7RGvzdk7Q2RcWeod7AU/view?usp=sharing",
+    EN: "https://drive.google.com/file/d/1qJR49rGKHdRtVhomvgbUrni1FcOgSkGc/view",
+    ES: "https://drive.google.com/file/d/1QiHCZZXSvphBWgO-b572bkQelvl2j6cn/view",
   };
   const linkedinLink = "https://www.linkedin.com/in/darwin-alves";
 
