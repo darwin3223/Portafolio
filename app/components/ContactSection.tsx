@@ -36,11 +36,12 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isDarkMode, language })
         style={{
           backgroundColor: isDarkMode ? '#2b3544' : '#f0f0f0',
           borderRadius: '5px',
-          padding: '8px',
+          padding: '5px',
           display: 'flex',
           alignItems: 'center',
           width: '90%',
           marginTop: '10px',
+          marginBottom: '150px',
         }}
       >
         <span style={{ marginRight: '10px', color: isDarkMode ? '#fff' : 'black' }}>darwinalveswork@gmail.com</span>
@@ -48,15 +49,16 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isDarkMode, language })
 
       <div
         style={{
-          marginLeft: '548px',
+          marginLeft: '650px',
           backgroundColor: isCopyHovered ? '#74c4ba' : '#a7f3d0',
           borderRadius: '5px',
           padding: '10px',
           display: 'flex',
           alignItems: 'center',
-          width: '6%',
-          marginTop: '-37.5px',
+          width: '4.6%',
+          marginTop: '-185px',
           cursor: 'pointer',
+       
           transition: 'background-color 0.3s ease, transform 0.3s ease',
           transform: isCopyHovered ? 'scale(1.05)' : 'scale(1)',
         }}
@@ -69,11 +71,17 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isDarkMode, language })
 
       {copied && (
         <Tooltip
-          content={language === 'ES' ? '¡Copiado!' : 'Copied!'}
           placement="bottom"
           style={{ color: isDarkMode ? '#ffffff' : '#000000' }}
         />
       )}
+      <div
+        style={{
+       
+        marginTop: "40px"
+      
+        }}
+      ></div>
     </div>
   );
 };

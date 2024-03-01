@@ -6,12 +6,11 @@ interface HeaderBGProps {
 
 const HeaderBG: React.FC<HeaderBGProps> = ({ isDarkMode }) => {
   return (
-    <div
+    <div 
       style={{
         position: "fixed",
         backgroundColor: isDarkMode ? '#1f2937' : '#ffffff',
-        paddingBottom: "50px",
-        padding: "40px",
+        paddingTop: "100px",
         paddingLeft: "10540px",
         marginLeft: "-1000px",
         marginTop: "-100px",

@@ -4,7 +4,6 @@
 import React, { useState, ReactNode } from "react";
 import AboutMeSection from "./components/AboutMeSection";
 import Head from "next/head";
-import CopyrightsSection from "./components/CopyrightsSection";
 import Separador from "./components/Separador";
 import ProjectWeb from "./components/ProjectsSection/Web-Aplication";
 import ProjectAndroid from "./components/ProjectsSection/Android-Aplication";
@@ -77,7 +76,7 @@ export default function About() {
         <ProjectPasswordGenerator isDarkMode={isDarkMode} language={language} />
         <SocialSection isDarkMode={isDarkMode} />
         <ContactSection isDarkMode={isDarkMode} language={language} />
-        <CopyrightsSection isDarkMode={isDarkMode} language={language} />
+    
       </CenterComponent>
     </div>
   );

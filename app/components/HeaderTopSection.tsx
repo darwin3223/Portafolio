@@ -41,7 +41,7 @@ const HeaderTopSection: React.FC<HeaderTopSectionProps> = ({ isDarkMode, toggleT
       <div className="ml-[97px] mt-[-24px] md:ml-[-10px] text-1.4rem flex items-center md:mt-[-20px]">
   {currentLetter}
 </div> 
-<div className=" ml-[825px] mt-[-30px] md:ml-[0] md:mt-[-1px]">
+<div className=" ml-[825px] mt-[-30px] md:ml-[-80px] md:mt-[-1px]">
       <HeaderProfile isDarkMode={isDarkMode} language={language} />
       </div>
       </div>
